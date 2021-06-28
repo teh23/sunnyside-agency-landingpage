@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Fraunces:wght@700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Fraunces:wght@700;900&display=swap");
 
 /* font-family: 'Barlow', sans-serif;
 font-family: 'Fraunces', serif;*/
@@ -18,11 +18,81 @@ font-family: 'Fraunces', serif;*/
     padding: 0;
     box-sizing: border-box;
 }
-@media screen and (max-width: 1440px) {
-    header {
-        background-image: url(/images/mobile/image-header.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100%;
-    }
+header {
+    background-image: url(./images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px 80px 20px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+.mobile {
+    visibility: visible;
+}
+.menu:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: calc(100% - 30px);
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid rgb(255, 255, 255);
+    border-left: 30px solid transparent;
+    z-index: 1001;
+}
+.menu {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    top: 4em;
+    left: 0;
+    padding: 2em 1em;
+}
+ul li {
+    margin: 1.25em 0;
+}
+ul li a {
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    color: var(--grey-blue);
+    font-size: 1.25em;
+    font-weight: 600;
+}
+li:last-of-type {
+    margin-top: 40px;
+}
+
+.contact {
+    background-color: var(--yellow);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: black;
+    padding: 1em 1.75em;
+    border-radius: 50px;
+    font-size: 1em;
+}
+
+.bottom-text {
+    text-align: center;
+    font-family: "Fraunces", serif;
+    color: white;
+    font-size: 1.75em;
+    letter-spacing: 0.25em;
+    font-weight: 900;
+}
+.arrow {
+    text-align: center;
+    margin: 3em 0;
 }
