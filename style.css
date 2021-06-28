@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Fraunces:wght@700;900&display=swap");
+
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif;*/
+:root {
+    --yellow: hsl(51, 100%, 49%);
+    --soft-red: hsl(7, 99%, 70%);
+    --graphic-design-text: hsl(167, 40%, 24%);
+    --photo-text: hsl(198, 62%, 26%);
+    --footer: hsl(168, 34%, 41%);
+    --blue: hsl(212, 27%, 19%);
+    --darker-grey-blue: hsl(213, 9%, 39%);
+    --grey-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 1440px) {
+    header {
+        background-image: url(/images/mobile/image-header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100%;
+    }
+}
