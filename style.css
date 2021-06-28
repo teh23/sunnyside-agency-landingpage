@@ -23,13 +23,15 @@ h2 {
     font-weight: 900;
     font-size: 32px;
 }
-header {
-    background-image: url(./images/mobile/image-header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 40px 20px 80px 20px;
+
+@media screen and (min-width: 1400px) {
+    h2 {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 48px;
+    }
 }
+
 ul li {
     margin: 1.25em 0;
 }
@@ -40,9 +42,6 @@ ul li a {
     font-size: 1.25em;
     font-weight: 600;
 }
-li:last-of-type {
-    margin-top: 40px;
-}
 
 .top {
     display: flex;
@@ -51,62 +50,119 @@ li:last-of-type {
     position: relative;
     margin-bottom: 70px;
 }
+@media screen and (max-width: 1440px) {
+    .menu {
+        display: flex;
+        position: absolute;
+        list-style: none;
 
-.menu:before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: calc(100% - 30px);
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-bottom: 30px solid rgb(255, 255, 255);
-    border-left: 30px solid transparent;
-    z-index: 1001;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        top: 4em;
+        left: 0;
+        padding: 2em 1em;
+    }
+    .contact {
+        background-color: var(--yellow);
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        color: black;
+        padding: 1em 1.75em;
+        border-radius: 50px;
+        font-size: 1em;
+    }
+    header {
+        background-image: url(./images/mobile/image-header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 40px 20px 80px 20px;
+    }
+    .menu:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: calc(100% - 30px);
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-bottom: 30px solid rgb(255, 255, 255);
+        border-left: 30px solid transparent;
+        z-index: 1001;
+    }
+    li:last-of-type {
+        margin-top: 40px;
+    }
+    input,
+    ul.menu {
+        display: none;
+    }
+    label {
+        position: relative;
+        display: block;
+        cursor: pointer;
+    }
+    #checkbox:checked ~ ul.menu {
+        display: flex;
+    }
 }
-input,
-ul.menu {
-    display: none;
-}
-label {
-    position: relative;
-    display: block;
-    cursor: pointer;
-}
-#checkbox:checked ~ ul.menu {
-    display: flex;
-}
-.menu {
-    display: flex;
-    position: absolute;
-    list-style: none;
 
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    top: 4em;
-    left: 0;
-    padding: 2em 1em;
-}
-.first {
-    display: flex;
-    flex-flow: column nowrap;
+@media screen and (min-width: 1400px) {
+    input {
+        display: none;
+    }
+
+    header {
+        background-image: url(./images/desktop/image-header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 20px 20px 200px 20px;
+    }
+    .hamburger {
+        display: none;
+    }
+    .top {
+        margin: 0 50px;
+        margin-bottom: 200px;
+    }
+    ul li:last-child a {
+        padding: 15px;
+        background-color: white;
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        color: black;
+
+        border-radius: 50px;
+        font-size: 1em;
+    }
+
+    .menu {
+        display: flex;
+        position: static;
+        list-style: none;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+    .item a {
+        color: white;
+        padding: 0 20px;
+        text-align: left;
+    }
+    .article__img {
+        width: 100%;
+    }
 }
 
 .article__img {
     width: 100%;
-}
-
-.contact {
-    background-color: var(--yellow);
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    color: black;
-    padding: 1em 1.75em;
-    border-radius: 50px;
-    font-size: 1em;
 }
 
 .bottom-text {
@@ -117,6 +173,7 @@ label {
     letter-spacing: 0.25em;
     font-weight: 900;
 }
+
 .arrow {
     text-align: center;
     margin: 3em 0;
