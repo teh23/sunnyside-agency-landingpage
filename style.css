@@ -50,7 +50,7 @@ ul li a {
     position: relative;
     margin-bottom: 70px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
     .menu {
         display: flex;
         position: absolute;
@@ -107,57 +107,6 @@ ul li a {
     }
     #checkbox:checked ~ ul.menu {
         display: flex;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    input {
-        display: none;
-    }
-
-    header {
-        background-image: url(./images/desktop/image-header.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding: 20px 20px 200px 20px;
-    }
-    .hamburger {
-        display: none;
-    }
-    .top {
-        margin: 0 50px;
-        margin-bottom: 200px;
-    }
-    ul li:last-child a {
-        padding: 15px;
-        background-color: white;
-        font-family: "Fraunces", serif;
-        font-weight: 700;
-        color: black;
-
-        border-radius: 50px;
-        font-size: 1em;
-    }
-
-    .menu {
-        display: flex;
-        position: static;
-        list-style: none;
-        flex-direction: row;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0);
-        padding: 0;
-        margin: 0;
-        justify-content: space-between;
-    }
-    .item a {
-        color: white;
-        padding: 0 20px;
-        text-align: left;
-    }
-    .article__img {
-        width: 100%;
     }
 }
 
@@ -291,10 +240,16 @@ ul li a {
     display: flex;
     flex-flow: row wrap;
 }
-
 .gallery-img {
     width: 50%;
+    object-fit: cover;
 }
+.g-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .footer {
     display: flex;
     flex-flow: column wrap;
@@ -320,4 +275,138 @@ ul li a {
     padding: 4rem 50px;
     display: flex;
     justify-content: space-evenly;
+}
+@media screen and (min-width: 1400px) {
+    input {
+        display: none;
+    }
+
+    header {
+        background-image: url(./images/desktop/image-header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 20px 20px 200px 20px;
+    }
+    .hamburger {
+        display: none;
+    }
+    .top {
+        margin: 0 50px;
+        margin-bottom: 200px;
+    }
+    ul li:last-child a {
+        padding: 15px;
+        background-color: white;
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        color: black;
+
+        border-radius: 50px;
+        font-size: 1em;
+    }
+
+    .menu {
+        display: flex;
+        position: static;
+        list-style: none;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+    .item a {
+        color: white;
+        padding: 0 20px;
+        text-align: left;
+    }
+    .article__img {
+        width: 100%;
+    }
+    .first {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .article {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .article:nth-child(1) {
+        flex-flow: row-reverse;
+    }
+    .picture {
+        width: 50%;
+    }
+    .content {
+        width: 50%;
+        margin: 0;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+
+        align-items: flex-start;
+        padding: 0 15em;
+    }
+    .subtitle {
+        text-align: left;
+    }
+    .text {
+        text-align: left;
+    }
+    .link {
+        text-align: left;
+    }
+
+    .article-second {
+        display: flex;
+    }
+    .grahpic-design {
+        background-image: url(/images/desktop/image-graphic-design.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 50%;
+        background-position: center;
+        padding: 40em 15em 2.5em 15em;
+        text-align: center;
+        color: var(--graphic-design-text);
+    }
+    .second-header {
+        margin-bottom: 1em;
+    }
+    .second-text {
+        color: var(--graphic-design-text);
+        font-size: 16px;
+        text-align: center;
+    }
+    .photography {
+        background-image: url(/images/desktop/image-photography.jpg);
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        background-position: center;
+        padding: 40em 20em 2.5em 20em;
+        text-align: center;
+        color: var(--graphic-design-text);
+    }
+    .client-content {
+        display: flex;
+        margin: 0 10em;
+    }
+    .gallery {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .gallery-img {
+        width: 25%;
+    }
+    .footer {
+        display: flex;
+        flex-flow: column wrap;
+        background-color: var(--footer);
+        padding: 2em 35%;
+    }
 }
