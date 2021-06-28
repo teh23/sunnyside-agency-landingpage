@@ -363,7 +363,7 @@ ul li a {
         display: flex;
     }
     .grahpic-design {
-        background-image: url(./images/desktop/image-graphic-design.jpg);
+        background-image: url("./images/desktop/image-graphic-design.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -382,7 +382,7 @@ ul li a {
         text-align: center;
     }
     .photography {
-        background-image: url(./images/desktop/image-photography.jpg);
+        background-image: url("./images/desktop/image-photography.jpg");
 
         background-repeat: no-repeat;
         background-size: cover;
